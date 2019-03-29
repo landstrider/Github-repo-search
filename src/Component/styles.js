@@ -1,5 +1,22 @@
 import styled from 'styled-components';
 
+const DontBreakOut = styled.div`
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+`;
+
 export const FluidContainer = styled.div`
   background-color: #F0F5F9;
   min-height: 100vh;
@@ -182,7 +199,6 @@ export const Cards = styled.div`
   }
 `;
 
-
 export const Avatar = styled.div`
   height: 8rem;
   width: 8rem;
@@ -196,7 +212,7 @@ export const Avatar = styled.div`
   }
 `;
 
-export const RepoName = styled.div`
+export const RepoName = styled(DontBreakOut)`
   font-size: 22px;
   font-weight: 600;
   letter-spacing: 0.6px;
@@ -260,8 +276,7 @@ export const PillsContainer = styled.div`
   }
 `;
 
-
-export const RepoDescription = styled.div`
+export const RepoDescription = styled(DontBreakOut)`
   letter-spacing: 0.4px;
   margin-bottom: 2rem;
   line-height: 1.5;
