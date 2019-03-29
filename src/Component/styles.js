@@ -35,13 +35,13 @@ export const ContentContainer = styled.div`
   padding: 1.44rem;
   & > ${SectionContainer}:first-child {
     margin-bottom: 1.44rem;
-    height: 106px;
+    height: 132px;
   }
 
   @media only screen and (max-width: 991.92px) {
     padding: 1rem;
     & > ${SectionContainer}:first-child {
-      height: 160px;
+      height: 184px;
     }
   }
 `;
@@ -250,6 +250,12 @@ export const PillsContainer = styled.div`
     }
     & > ${Pill}:last-child {
       margin-top: 1rem;
+    }
+  }
+
+  @media only screen and (max-width: 321px) {
+    & > ${Pill}:not(:last-child) {
+      flex-basis: 40%;  
     }
   }
 `;
