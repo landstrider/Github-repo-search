@@ -135,10 +135,13 @@ export const ViewRepoButton = styled.a`
   text-align: center;
   background-color: #FFFFFF;
   transition: all 0.3s ease-in-out;
+  &:hover {
+    cursor: pointer;
+  };
   & span {
     padding: 1.44rem 0;
     box-shadow: inset 0px 7px 3px -8px #9b9b9b;
-  }
+  };
 `;
 
 export const RepoCardContainer = styled.div`
