@@ -9,6 +9,7 @@ function SearchContainer(props) {
   const [inputVal, setInput] = useState('');
 
   useEffect(() => {
+    /* auto click search button on CR press */
     document.getElementById("userInput").addEventListener("keyup", function(event) {
       if (event.keyCode === 13) {
         event.preventDefault();
