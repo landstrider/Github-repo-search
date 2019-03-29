@@ -166,9 +166,6 @@ export const RepoCardContainer = styled.div`
   margin-bottom: 1.44rem;
   background-color: #FFFFFF;
   box-shadow: 0 0 1px rgba(0,0,0,0.02);
-  &:hover {
-    cursor: pointer;
-  }
   &:hover ${ViewRepoButton}{
     background-color: #37A0FF;
     & span {
