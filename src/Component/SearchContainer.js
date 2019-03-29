@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchRepoData, isLoading, clearRepoData } from 'actions/actions';
 import { SectionHeading, SearchDiv, SearchButton, Input } from 'Component/styles'
@@ -54,6 +55,12 @@ function SearchContainer(props) {
     </div>
     </>
   );
+}
+
+SearchContainer.propTypes = {
+  getRepoData: PropTypes.func,
+  unsetIsLoading: PropTypes.func,
+  clearData: PropTypes.func,
 }
 
 const mapDispatchToProps = dispatch => ({

@@ -29,7 +29,7 @@ function RepoCard(props) {
     <Card>
       <CardContent>
         <Avatar>
-          <img src={owner__avatar_url} />
+          <img src={owner__avatar_url} alt="user profile" />
         </Avatar>
         <RepoName>{name}</RepoName>
         <PillsContainer>
