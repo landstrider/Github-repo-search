@@ -183,6 +183,7 @@ export const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  flex-grow: 1;
   & > ${RepoCardContainer}:nth-child(3n+2) {
     margin-right: 1.44rem;
     margin-left: 1.44rem;
