@@ -36,7 +36,7 @@ const reducer = (state = initialState, action) => {
           ...state,
           pageNumber: pageNumber - 1,
         }
-      } else if (action.payload === 'right' && pageNumber < Math.ceil(state.data.length % 9)) {
+      } else if (action.payload === 'right' && pageNumber < Math.ceil(state.data.length / 9)) {
         return {
           ...state,
           pageNumber: pageNumber + 1,

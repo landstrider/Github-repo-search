@@ -336,8 +336,8 @@ export const ChevronArrowLeft = styled(ChevronArrow)`
 
 export const ChevronArrowRight = styled(ChevronArrow)`
   transform: rotate(-45deg);
-  border-color: ${props => props.page === Math.ceil(props.length % 9) ? '#bfbfbf' : '#37A0FF'};
+  border-color: ${props => props.page === Math.ceil(props.length / 9) ? '#bfbfbf' : '#37A0FF'};
   &:hover {
-    cursor: ${props => props.page === Math.ceil(props.length % 9) ? 'initial' : 'pointer'};
+    cursor: ${props => props.page === Math.ceil(props.length / 9) ? 'initial' : 'pointer'};
   };
 `;
