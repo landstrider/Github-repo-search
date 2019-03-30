@@ -277,6 +277,9 @@ export const RepoDescription = styled(DontBreakOut)`
   letter-spacing: 0.4px;
   margin-bottom: 2rem;
   line-height: 1.5;
+  max-height: 200px;
+  overflow: scroll;
+  text-overflow: ellipsis;
 `;
 
 export const CardContainerDiv = styled.div`
