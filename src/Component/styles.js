@@ -293,3 +293,49 @@ export const NonDataMsg = styled.div`
   letter-spacing: 0.8px;
   color: #bfbfbf;
 `;
+
+export const Pagination = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.44rem;
+  margin: 1rem 0;
+  @media only screen and (max-width: 991.91px) {
+    flex-direction: column-reverse;
+  }
+`;
+
+export const NavControl = styled.div`
+  display: flex;
+  align-items: center;
+  width: 4rem;
+  justify-content: space-between;
+`;
+
+export const ChevronArrow = styled.div`
+  display: inline-block;
+  border-right: 4px solid #37A0FF;
+  border-bottom: 4px solid #37A0FF;
+  width: 16px;
+  height: 16px;
+  &:hover {
+    cursor: pointer;
+  };
+`;
+
+export const ChevronArrowLeft = styled(ChevronArrow)`
+  transform: rotate(-225deg);
+  border-color: ${props => props.page === 1 ? '#bfbfbf' : '#37A0FF'};
+  &:hover {
+    cursor: ${props => props.page === 1 ? 'initial' : 'pointer'};
+  };
+`;
+
+export const ChevronArrowRight = styled(ChevronArrow)`
+  transform: rotate(-45deg);
+  border-color: ${props => props.page === Math.ceil(props.length % 9) ? '#bfbfbf' : '#37A0FF'};
+  &:hover {
+    cursor: ${props => props.page === Math.ceil(props.length % 9) ? 'initial' : 'pointer'};
+  };
+`;
+

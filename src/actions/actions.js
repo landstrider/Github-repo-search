@@ -11,3 +11,8 @@ export const isLoading = payload => ({
 export const clearRepoData = () => ({
   type: 'CLEAR_REPO_DATA',
 });
+
+export const updatePageNumber = payload => ({
+  type: 'UPDATE_PAGE_NUMBER',
+  payload,
+});

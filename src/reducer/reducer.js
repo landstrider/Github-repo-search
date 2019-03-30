@@ -2,6 +2,7 @@ const initialState = {
   isFetching: false,
   data: [],
   errMsg: '',
+  pageNumber: 1,
 }
 
 const reducer = (state = initialState, action) => {
@@ -28,10 +29,27 @@ const reducer = (state = initialState, action) => {
         ...state,
         data: [],
       }
+    case 'UPDATE_PAGE_NUMBER': {
+      if (action.payload === 'left' && state.pageNumber > 1) {
+        return {
+          ...state,
+          pageNumber: state.pageNumber - 1,
+        }
+      } else if (action.payload === 'right' && state.pageNumber < Math.ceil(state.data.length % 9)) {
+        return {
+          ...state,
+          pageNumber: state.pageNumber + 1,
+        }
+      } else return state;
+    }
+    case 'RESET_PAGE_NUMBER':
+      return {
+        ...state,
+        pageNumber: 1,
+      }
     default:
     return state;
   }
-
 } 
 
 export default reducer;

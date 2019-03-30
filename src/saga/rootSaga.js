@@ -29,6 +29,7 @@ function organizeData(reposJSONArr) {
 function* fetchRepoDataWorker(actionObj) {
   const queryParam = actionObj.payload;
   try {
+    yield put({ type: 'RESET_PAGE_NUMBER' });
     yield put({ type: 'IS_LOADING', payload: true });
     const repoData = yield call(fetchRepoData, queryParam);
 
