@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { updatePageNumber } from 'actions/actions';
 import {
   Pagination,
+  PageNumber,
   NavControl,
   ChevronArrowLeft,
   ChevronArrowRight,
@@ -17,6 +18,9 @@ function PaginationControl(props) {
 
   return (
     <Pagination>
+      <PageNumber>
+        <span>Page {pageNumber} of {Math.ceil(data.length / 9)}</span>
+      </PageNumber>
       <NavControl>
         <ChevronArrowLeft 
           length={data.length}

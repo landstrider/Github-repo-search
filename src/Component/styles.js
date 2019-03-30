@@ -299,12 +299,21 @@ export const NonDataMsg = styled.div`
 
 export const Pagination = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   padding: 0 1.44rem;
   margin: 1rem 0;
   @media only screen and (max-width: 991.91px) {
-    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+`;
+
+export const PageNumber = styled.div`
+  font-size: 22px;
+  margin-right: 2.88rem;
+  letter-spacing: 0.5px;
+  @media only screen and (max-width: 991.91px) {
+    font-size: 18px;
   }
 `;
 
@@ -324,6 +333,11 @@ export const ChevronArrow = styled.div`
   &:hover {
     cursor: pointer;
   };
+
+  @media only screen and (max-width: 991.91px) {
+    width: 18px;
+    height: 18px;
+  }
 `;
 
 export const ChevronArrowLeft = styled(ChevronArrow)`
