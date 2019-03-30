@@ -15,7 +15,7 @@ function CardContainer(props) {
     if (error) return <NonDataMsg>{error}</NonDataMsg>;
     return (
       <Cards>
-        {cardData.slice(( 9 * pageNumber), ( 9 * (pageNumber + 1) )).map((each, index) => ( 
+        {cardData.slice( 9 * (pageNumber - 1), 9 * pageNumber ).map((each, index) => ( 
           <RepoCard cardConfig={each} key={index} />    
         ))} 
       </Cards>
