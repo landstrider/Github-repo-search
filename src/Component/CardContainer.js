@@ -28,7 +28,7 @@ function CardContainer(props) {
     <CardContainerDiv>
       {renderConditional()}
     </CardContainerDiv>
-    {cardData.length > 9 ? <PaginationControl /> : null}
+    {(!isLoading && cardData.length) > 9 ? <PaginationControl /> : null}
     </>
   );
 }

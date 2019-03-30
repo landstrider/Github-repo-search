@@ -311,7 +311,7 @@ export const Pagination = styled.div`
 export const NavControl = styled.div`
   display: flex;
   align-items: center;
-  width: 4rem;
+  width: 5rem;
   justify-content: space-between;
 `;
 
@@ -319,8 +319,8 @@ export const ChevronArrow = styled.div`
   display: inline-block;
   border-right: 4px solid #37A0FF;
   border-bottom: 4px solid #37A0FF;
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   &:hover {
     cursor: pointer;
   };
@@ -341,4 +341,3 @@ export const ChevronArrowRight = styled(ChevronArrow)`
     cursor: ${props => props.page === Math.ceil(props.length % 9) ? 'initial' : 'pointer'};
   };
 `;
-
