@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { updatePageNumber } from 'actions/actions';
 import {
   Pagination,
-  PaginationContent,
   NavControl,
   ChevronArrowLeft,
   ChevronArrowRight,

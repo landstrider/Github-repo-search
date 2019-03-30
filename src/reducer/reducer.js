@@ -30,15 +30,16 @@ const reducer = (state = initialState, action) => {
         data: [],
       }
     case 'UPDATE_PAGE_NUMBER': {
-      if (action.payload === 'left' && state.pageNumber > 1) {
+      const { pageNumber } = state;
+      if (action.payload === 'left' && pageNumber > 1) {
         return {
           ...state,
-          pageNumber: state.pageNumber - 1,
+          pageNumber: pageNumber - 1,
         }
-      } else if (action.payload === 'right' && state.pageNumber < Math.ceil(state.data.length % 9)) {
+      } else if (action.payload === 'right' && pageNumber < Math.ceil(state.data.length % 9)) {
         return {
           ...state,
-          pageNumber: state.pageNumber + 1,
+          pageNumber: pageNumber + 1,
         }
       } else return state;
     }
